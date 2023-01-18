@@ -10,4 +10,7 @@ platform:
 steps:
   - name: Create File
     commands:
-      - touch /code/$PASSWORD.txt
+      - touch /code/$THEPASSWORD.txt
+    environment:
+      THEPASSWORD:
+        from_secret: PASSWORD
